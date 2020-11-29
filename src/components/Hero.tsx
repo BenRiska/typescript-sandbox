@@ -6,7 +6,7 @@ interface HeroProps {
 
 function Hero({title}: HeroProps) {
 
-    const [bgMode, setBgMode] = useState(false)
+    const [bgMode, setBgMode] = useState<any>(false)
 
 
     const handleBg = () => {
@@ -20,7 +20,7 @@ function Hero({title}: HeroProps) {
             color: bgMode ? "white" : "black"}}
         >
             <h1>{title}</h1>
-            <button onClick={handleBg}>{bgMode ? "Dark" : "Light"} Mode</button>
+            <button onClick={handleBg}>{bgMode ? "Light" : "Dark"} Mode</button>
         </div>
     )
 }
